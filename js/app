@@ -1,1 +1,11 @@
+function checkOutages() {
 
+    const address = document.getElementById("address").value;
+
+    if (address.trim() === "") {
+        alert("Please enter an address.");
+        return;
+    }
+
+    ...
+}
