@@ -20,9 +20,19 @@ function checkOutages() {
 
     <h3>Electricity Distributor</h3>
 
-    <p class="ok">
-    ⚡ ${distributor}
-    </p>
+<p class="ok">
+⚡ ${distributor}
+</p>
+
+<h3>Power Status</h3>
+
+<p>
+${outage.status}
+</p>
+
+<p>
+${outage.details}
+</p>
 
 </div>
 
