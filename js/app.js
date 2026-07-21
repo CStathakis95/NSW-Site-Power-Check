@@ -7,15 +7,18 @@ async function checkOutages() {
         return;
     }
 
+async function checkOutages() {
+
+    const address = document.getElementById("address").value;
+
+    if (address.trim() === "") {
+        alert("Please enter an address.");
+        return;
+    }
+
     const distributor = findDistributor(address);
 
-    console.log("Distributor:", distributor);
-
     const outage = await checkOutage(distributor, address);
-
-    console.log("Outage result:", outage);
-
-    document.getElementById("results").innerHTML = `
 
         <h2>Checking:</h2>
         <p>${address}</p>
