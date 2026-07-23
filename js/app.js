@@ -7,8 +7,6 @@ async function checkOutages() {
         return;
     }
 
-    const distributor = findDistributor(address);
-
     const outage = await getOutage(address);
 
     document.getElementById("results").innerHTML = `
@@ -22,7 +20,7 @@ async function checkOutages() {
             <h3>Electricity Distributor</h3>
 
             <p class="ok">
-                ⚡ ${distributor}
+            ⚡ ${outage.distributor}
             </p>
 
 
