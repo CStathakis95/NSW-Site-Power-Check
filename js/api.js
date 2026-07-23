@@ -2,7 +2,7 @@ async function getOutage(address) {
 
     try {
 
-        const response = await fetch(`${CONFIG.API_URL}/check`, {
+        const response = await fetch(`${CONFIG.API_URL}`, {
 
             method: "POST",
 
@@ -11,7 +11,7 @@ async function getOutage(address) {
             },
 
             body: JSON.stringify({
-                address
+                address: address
             })
 
         });
